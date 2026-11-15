@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/nadeem0305/ghphone"
+	"github.com/nadeem0305/ghphone/phone"
 )
 
 type result struct {
@@ -29,7 +29,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, "too many numbers (max 200)", http.StatusBadRequest)
 			return
 		}
-		n, err := ghphone.Parse(in)
+		n, err := phone.Parse(in)
 		out = append(out, result{Input: in, Valid: err == nil, E164: n.E164, Local: n.Local, Network: n.Network})
 	}
 	w.Header().Set("Content-Type", "application/json")

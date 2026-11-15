@@ -1,5 +1,5 @@
-// Package ghphone validates Ghanaian mobile numbers and identifies the network.
-package ghphone
+// Package phone validates Ghanaian mobile numbers and identifies the network.
+package phone
 
 import (
 	"errors"

@@ -1,4 +1,4 @@
-package ghphone
+package phone
 
 import "testing"
 

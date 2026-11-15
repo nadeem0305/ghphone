@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/nadeem0305/ghphone"
+	"github.com/nadeem0305/ghphone/phone"
 )
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
 	}
 	bad := 0
 	for _, in := range inputs {
-		n, err := ghphone.Parse(in)
+		n, err := phone.Parse(in)
 		if err != nil {
 			fmt.Printf("%-18s invalid\n", in)
 			bad++

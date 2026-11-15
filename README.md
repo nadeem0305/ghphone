@@ -1,10 +1,14 @@
 # ghphone
 
+**Live:** https://ghphone.vercel.app
+
 Validate Ghanaian mobile numbers and tell which network they belong to (MTN, Telecel, AT).
 Useful before sending a Mobile Money prompt or an SMS, so typos fail early instead of at the provider.
 
 ```go
-n, err := ghphone.Parse("+233 24 412 3456")
+import "github.com/nadeem0305/ghphone/phone"
+
+n, err := phone.Parse("+233 24 412 3456")
 // n.E164 == "+233244123456", n.Local == "0244123456", n.Network == "MTN"
 ```
 
